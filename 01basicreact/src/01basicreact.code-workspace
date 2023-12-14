@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../01basicreact"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "01vitereact"
+	}
+}
