@@ -1,9 +1,12 @@
 
-
+import Chai from "./chai";
 
 function App() {
   return (
-    <h1>React Project</h1>
+    <>
+      <Chai />
+      <h1>React Project</h1>
+    </>
   );
 }
 
