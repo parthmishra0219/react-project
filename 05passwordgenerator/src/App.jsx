@@ -7,6 +7,7 @@ function App() {
   const [numberAllowed , setNumberAllowed] = useState(false)
   const [charAllowed , setCharAllowed] = useState(false)
   const[password,setPassword]= useState("")
+  const [isClicked, setIsClicked] = useState(false);
 
   //useRef hook
   const passwordRef = useRef(null)
@@ -41,6 +42,15 @@ useEffect (()=> {
 },[length,numberAllowed,charAllowed,passwordGenerator])
 
 
+  const handleButtonClick = () => {
+       setIsClicked(true);
+         console.log('Button Clicked!');
+  }
+
+  const handleBothClicks = () => {
+    copyPasswordToClibpboard();
+    handleButtonClick();
+  };
 
   
 
@@ -60,8 +70,11 @@ useEffect (()=> {
         ref={passwordRef}
         />
         <button
-        onClick={copyPasswordToClibpboard}
-        className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>copy</button>
+       
+        onClick={handleBothClicks}
+         className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>
+           {isClicked ? 'Button Clicked!' : 'Click Me'}
+          </button>
       </div>
       <div className='flex text-sm gap-x-2'>
         <div className='flex item-center gap-x-1'>
