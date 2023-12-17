@@ -33,7 +33,7 @@ function App() {
     >
       
         <div className="w-full">
-            <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+            <div className="w-full max-w-2xl mx-auto border border-slate-500 rounded-lg p-10 backdrop-blur-sm bg-white/30">
 
             <h1 className="text-red-600  text-4xl font-bold text-center mb-4">Currency Converter</h1>
                 <form
@@ -43,7 +43,7 @@ function App() {
 
                     }}
                 >
-                    <div className="w-full mb-1">
+                    <div className="w-full mb-1 ">
                         <InputBox
                             label="From"
                             amount={amount}
@@ -53,6 +53,20 @@ function App() {
                            selectCurrency={from}
                           //  onAmountChange={(amount)=>setAmount(amount)}
                            onAmountChange={(amount) => setAmount(Math.max(0, parseFloat(amount) || 0))}
+
+                          // onAmountChange={(amount) => {
+                          //   if (typeof amount === 'string') {
+                             
+                          //     const parsedAmount = parseFloat(amount.replace(0, '1')) || 0;
+                          //     const nonNegativeAmount = Math.max(parsedAmount, 0);
+                          //     setAmount(nonNegativeAmount);
+                          //   }
+                          // }}
+                              
+                              
+
+
+
                         />
                     </div>
                     <div className="relative w-full h-0.5">
@@ -65,7 +79,7 @@ function App() {
                             swap
                         </button>
                     </div>
-                    <div className="w-full mt-1 mb-4">
+                    <div className="w-full mt-1 mb-4 ">
                         <InputBox
                             label="To"
                             
